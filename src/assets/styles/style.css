@@ -1,0 +1,100 @@
+/* Global styles */
+
+/* fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(69, 74, 84, 0.5);
+  }
+  
+  /* Focus styles */
+  
+  /* Root variables */
+  :root {
+    /* Colors */
+    --primaryColor: #000129;
+    --secondaryColor: white;
+    --accentColor: #00ffff; /* Aqua color used for accents */
+    --highlightColor: #ffd700; /* Gold color for highlighting elements */
+    --grayColor: gray;
+    --blackColor: black;
+    --whiteColor: white;
+    --lavenderColor: lavender;
+    --darkBlueColor: darkblue;
+    --redColor: red;
+  
+    /* Typography */
+    --primaryFontFamily: 'Poppins', sans-serif;
+    --secondaryFontFamily: 'Roboto', sans-serif;
+
+    /* linear gradient colors */
+    --primaryGradient: linear-gradient(to top,#000000, var(--primaryColor));
+   
+
+
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+  
+    /* Border */
+    --borderWidth: 1px;
+    --borderStyle: solid;
+    --borderColor: var(--primaryColor);
+    --borderRadius: 4px;
+  
+    /* Box Shadow */
+    --boxShadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+    /* Responsive breakpoints */
+    --mobileBreakpoint: 480px;
+    --tabletBreakpoint: 768px;
+    --desktopBreakpoint: 1024px;
+
+     /* temporary items */
+  --termporaryBorder: 1px solid red;
+  }
+  
+  html{
+    color-scheme: dark;
+  }
+  body{
+    margin-top: 80px;
+}
+  .container{
+    max-width: 90vw!important ;
+    min-height: 50vh;
+    margin: auto;
+    /* box-shadow: 0 4px 4px 0 var(--blackColor);  */
+  }
+  
+  .f-r{
+    flex-direction: row;
+  }
+  .d-flex{
+    display: flex;
+  }
+  .j-c-c{
+    justify-content:center;
+  }
+  .j-c-s-a{
+    justify-content:space-around;
+  }
+  .j-c-s-b{
+    justify-content:space-between;
+  }
+  .align-i-e{
+    align-items: center;
+  }
+  
+  

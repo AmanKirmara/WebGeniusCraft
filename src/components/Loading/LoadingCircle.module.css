@@ -1,0 +1,29 @@
+.buttonRing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(0.5px);
+  background-color: rgba(0, 0, 0, 0.237);
+  padding: 5px;
+}
+.innerRing {
+  height:30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--whiteColor);
+  border-top-color: transparent;
+  animation: rotateRing 1s linear infinite;
+}
+@keyframes rotateRing {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

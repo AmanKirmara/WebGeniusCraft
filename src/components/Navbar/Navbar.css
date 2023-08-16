@@ -1,0 +1,47 @@
+
+
+/* Navbar.module.css */
+@import "../../../src/assets/styles/style.css";
+.navbar {
+  background-color: transparent;
+  /* width: 80%; */
+  color: white;
+  font-family: var(--primaryFontFamily);
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navLinks li {
+  margin: 0 10px;
+  cursor: pointer;
+  position: relative;
+}
+.navLinks li a{
+  color: white;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+.navLinks li a:hover{
+  color: var(--grayColor);
+}
+/* Apply styles to the active link */
+li a.active {
+  color: var(--accentColor);
+  border-bottom: 1px solid var(--accentColor);
+}
+.navLinks li::after{
+  content: '';
+  display: block;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  width: 0%;
+  height: 1.5px;
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+}

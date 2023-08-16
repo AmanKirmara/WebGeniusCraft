@@ -1,0 +1,24 @@
+/* Button.module.css  #007bff */
+.button {
+    background-color: var(--primaryColor);
+    color: var(--lavenderColor);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    min-width: 100px;
+    border-radius: 50px;
+    font-size: 1rem;
+    text-transform: capitalize;
+    margin: 30px;
+    outline: 1px solid var(--primaryColor);
+    outline-offset: 2px;
+    position: relative;
+    overflow: hidden;
+  }
+  .button:active{
+    transform: translateY(1px) scale(.99);
+  }
+  .button:hover {
+    background-color: #272a2d;
+  }
+  

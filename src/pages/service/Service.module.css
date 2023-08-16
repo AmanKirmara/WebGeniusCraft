@@ -1,0 +1,45 @@
+
+.container_warp{
+    background-image: var(--primaryGradient);
+    background-attachment: fixed;
+    padding-top: 50px;
+}
+.container {
+    min-height: 90vh;
+    max-width: 80vw;
+    margin: auto;
+    font-family: var(--primaryFontFamily);
+  }
+  .container h2{
+    color: var(--highlightColor);
+    font-size: 1.3rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+  .text_cover{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .container ul{
+    padding-left: 20px;
+    list-style: none;
+    width: 45%;
+    color: var(--accentColor);
+  }
+  .container ul h3{
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin: 15px auto 8px auto;
+    color: var(--voilet);
+  }
+  .container ul p{
+    font-size: 0.8rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 25px;
+    color: var(--secondaryColor);
+  }
+  
+  
