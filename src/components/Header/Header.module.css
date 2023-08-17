@@ -9,9 +9,12 @@
   align-items: center;
   justify-content: space-around;
   height: 80px;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: fixed; 
   top: 0; 
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
   left: 0; 
   z-index: 2; 
   transition: background-color 0.4s ease-in-out;

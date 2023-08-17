@@ -67,6 +67,7 @@
   
   html{
     color-scheme: dark;
+    background-color: var(--primaryColor);
   }
   body{
     margin-top: 80px;

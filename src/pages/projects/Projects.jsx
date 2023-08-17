@@ -1,8 +1,9 @@
 
+import styles from "./Projects.module.css";
 function Projects(){
     return(
         <>
-            Projects form 
+            <div className={styles.container}></div>
         </>
     );
 }

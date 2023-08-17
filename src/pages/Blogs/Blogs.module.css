@@ -11,8 +11,17 @@
     font-family: var(--primaryFontFamily);
     background-image: var(--primaryGradient);
     background-attachment: fixed;
+    animation: loadMargin 0.4s linear 1;
+    transition: margin-top 0.3s ease-in-out;
+}
+@keyframes loadMargin {
+  0%{
+    margin-top: 150px;
   }
-  
+  100%{
+    margin-top: 0px;
+  }
+}
   .blog {
     max-width: 80vw;
     margin: auto;

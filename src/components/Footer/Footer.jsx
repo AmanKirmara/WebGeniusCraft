@@ -16,6 +16,9 @@ import React from "react";
 import styles from "./Footer.module.css";
 import GoogleMap from "../GoogleMap/GoogleMap";
 function Footer() {
+  const handleScrollZero =()=>{
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  };
   return (
     <>
       <footer>
@@ -51,16 +54,14 @@ function Footer() {
             <div className={styles.footerLogo}>
               <img src={footerLogo} alt="" />
             </div>
-            <p>
-              Thanks for visiting! I'm a web developer and designer, passionate
+            <p>Thanks for visiting! I'm a web developer and designer, passionate
               about creating visually appealing and user-friendly websites. Let's
-              connect and discuss your project!
-            </p>
+              connect and discuss your project!</p>
             <div className={styles.social}>
-              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" >
+              <a href="https://www.instagram.com/theaman.j" target="_blank" rel="noopener noreferrer" >
                 <FaInstagram />
               </a>
-              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/Amankirmara01" target="_blank" rel="noopener noreferrer">
                 <FaFacebookF />
               </a>
               <a href="https://github.com/AmanKirmara" target="_blank" rel="noopener noreferrer">
@@ -77,25 +78,25 @@ function Footer() {
           <div className={styles.centerftr}>
             <h2>Useful Links</h2>
             <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/aboutus/">About Us</Link></li>
-              <li><Link to="#">Services</Link></li>
-              <li><Link to="#">Contact us</Link></li>
-              <li><Link to="#">Terms and-Conditions</Link></li>
+              <li><Link to="/" onClick={handleScrollZero}>Home</Link></li>
+              <li><Link to="/about/" onClick={handleScrollZero}>About Us</Link></li>
+              <li><Link to="/service" onClick={handleScrollZero}>Services</Link></li>
+              <li><Link to="/contact" onClick={handleScrollZero}>Contact us</Link></li>
+              <li><Link to="/terms" onClick={handleScrollZero}>Terms and-Conditions</Link></li>
             </ul>
             <ul>
               <li><Link to="/">Portfolio</Link></li>
               <li><Link to="/">Expert Team</Link></li>
-              <li><Link to="#">Latest News</Link></li>
-              <li><Link to="#">Privacy Policy</Link></li>
-              <li><Link to="#">Privacy Policy</Link></li>
+              <li><Link to="/">Latest News</Link></li>
+              <li><Link to="/">Privacy Policy</Link></li>
+              <li><Link to="/">Privacy Policy</Link></li>
             </ul>
           </div>
           <div className={styles.rightftr}>
             <div className={styles.find_us}>
               <h2> Find US on Map </h2>
               {/* <FaMapMarkerAlt /> */}
-              <GoogleMap ht="180px" op={0.7} br="3px" />
+              <GoogleMap ht="200px" op={0.7} br="3px" />
             </div>
             <div className={styles.footercontact}>
               <input type="text" name="footerinput" placeholder="Enter your email add." title="" autoComplete="off" translate="no" maxLength={50} required />

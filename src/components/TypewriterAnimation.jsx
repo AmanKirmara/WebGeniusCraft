@@ -26,7 +26,7 @@ function TypewriterAnimation({ textArray, speed, color}) {
     return () => clearInterval(interval);
   }, [currentIndex, currentText, isDeleting, speed, textArray]);
 
-  return <span style={{color}}>{currentText}</span>;
+  return <span style={{color, display:"block"}}>{currentText} . </span>;
 }
 
 export default TypewriterAnimation;

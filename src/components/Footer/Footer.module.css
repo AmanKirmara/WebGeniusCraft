@@ -76,6 +76,7 @@ footer{
   padding: 10px;
 }
 .leftftr img{
+  padding: 10px;
   max-height: 80px;
 }
 .leftftr p{
@@ -83,6 +84,7 @@ footer{
   color: var(--whiteColor);
   font-size: 0.9rem;
   margin: 20px auto;
+  padding-right: 40px;
 }
 .leftftr .social{
   margin: auto;
@@ -176,7 +178,7 @@ footer{
   position: relative;
   outline: 1px solid var(--lavenderColor);
   outline-offset: 3px;
-  border-radius: 4px;
+  border-radius: 1px;
   background-color: #201d1d;
 }
  .footercontact input{
@@ -185,8 +187,8 @@ footer{
   width: 90%;
   outline: none;
   border: none;
-  border-radius: 5px;
-  padding: 8px 15px;
+  border-radius: 3px;
+  padding: 4px 10px;
   font-size: 1.1rem;
   font-family: var(--primaryFontFamily);
  }

@@ -12,6 +12,7 @@ import Header from "./components/Header/Header";
 import Loading from "./components/Loading/Loading";
 import { useEffect, useState } from "react";
 import Footer from './components/Footer/Footer';
+// import HomeVi from "./pages/Home/HomeVi";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -25,11 +26,11 @@ function App() {
 
   return (
     <>
-      {loading ? <Loading /> : 
-      <>
+      {loading ? <Loading /> : null}
       <Header />
       <Routes>
         <Route exact path="/" element={<Home />} />
+        {/* <Route exact path="/" element={<HomeVi />} /> */}
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/service" element={<Service />} />
@@ -38,8 +39,6 @@ function App() {
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
-    </>
-     }
     </>
   );
 }
