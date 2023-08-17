@@ -82,7 +82,7 @@ function Footer() {
               <li><Link to="/about/" onClick={handleScrollZero}>About Us</Link></li>
               <li><Link to="/service" onClick={handleScrollZero}>Services</Link></li>
               <li><Link to="/contact" onClick={handleScrollZero}>Contact us</Link></li>
-              <li><Link to="/terms" onClick={handleScrollZero}>Terms and-Conditions</Link></li>
+              <li><Link to="/terms" >Terms and-Conditions</Link></li>
             </ul>
             <ul>
               <li><Link to="/">Portfolio</Link></li>
