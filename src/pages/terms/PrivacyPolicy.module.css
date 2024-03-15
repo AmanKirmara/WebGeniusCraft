@@ -1,0 +1,51 @@
+/* TermsAndConditions.module.css */
+
+  .container_warp {
+    /* background-image: var(--primaryGradient); */
+    background-image: linear-gradient(to top, transparent, #690000);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+  animation: loadMargin 0.4s linear 1;
+  transition: margin-top 0.3s ease-in-out;
+  }
+  @keyframes loadMargin {
+    0%{
+      margin-top: 150px;
+    }
+    100%{
+      margin-top: 0px;
+    }
+    }
+  .container {
+    max-width: 70vw;
+    margin: 0 auto;
+    font-family: var(--primaryFontFamily);
+  }
+  
+  h1 {
+    color: var(--highlightColor);
+  }
+
+  section > *{
+    margin: 15px auto;
+  }
+  
+  .contact_link {
+    color: var(--highlightColor);
+    text-decoration: underline;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .container_warp {
+      padding: 15px;
+      background-image: linear-gradient(to top, transparent, rgb(105, 0, 0) 230%);    }
+    .container{
+        max-width: 100%;
+        width: 100vw;
+    }
+
+  }
+  

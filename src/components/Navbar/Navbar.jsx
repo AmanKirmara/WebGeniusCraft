@@ -2,10 +2,32 @@
 import React from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
+import { SlMenu } from "react-icons/sl";
+import { HiMiniXMark } from "react-icons/hi2";
 
 const Navbar = (props) => {
+  const [showNavlink, setShowNavlink] = React.useState(false);
+  const [windowWidth, setWindowWidth] = React.useState(0);
+  const handleToggleMenu = () => {
+    setShowNavlink(!showNavlink);
+  };
+  React.useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  }, []);
+
+
   return (
-    <nav className="navbar" style={{ width: props.width }}>
+    <nav className={`navbar ${showNavlink ? "active" : ""}`} style={{ maxWidth: props.width }}>
+      {windowWidth < 768 && (
+        <>
+          {!showNavlink ? (
+            <SlMenu className="menubar" onClick={handleToggleMenu} />
+          ) : (
+            <HiMiniXMark className="menubar" onClick={handleToggleMenu} />
+          )}
+        </>
+      )}
+
       <ul className="navLinks">
         <li>
           <NavLink to="/"> Home </NavLink>

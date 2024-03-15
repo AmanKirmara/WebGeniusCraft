@@ -1,0 +1,28 @@
+/* NewsPage.module.css */
+.newsPage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    font-family: var(--primaryFontFamily);
+  }
+  
+  .newsList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .newsPage {
+      padding: 20px;
+    }
+    
+    .newsList {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr / 2));
+    }
+    
+  }
+  
+  /* Add more styling as needed */
+  

@@ -4,7 +4,6 @@ import {
   FaGithub,
   FaWhatsapp,
   FaRegEnvelope,
-  FaPaperPlane,
   FaMapMarkerAlt,
   FaPhone,
   FaRegEnvelopeOpen,
@@ -51,14 +50,16 @@ function Footer() {
         <hr />
         <div className={styles.centerrow}>
           <div className={styles.leftftr}>
+
             <div className={styles.footerLogo}>
               <img src={footerLogo} alt="" />
             </div>
+            
             <p>Thanks for visiting! I'm a web developer and designer, passionate
               about creating visually appealing and user-friendly websites. Let's
               connect and discuss your project!</p>
             <div className={styles.social}>
-              <a href="https://www.instagram.com/theaman.j" target="_blank" rel="noopener noreferrer" >
+              <a href="https://www.instagram.com/itsahil143" target="_blank" rel="noopener noreferrer" >
                 <FaInstagram />
               </a>
               <a href="https://www.facebook.com/Amankirmara01" target="_blank" rel="noopener noreferrer">
@@ -82,14 +83,14 @@ function Footer() {
               <li><Link to="/about/" onClick={handleScrollZero}>About Us</Link></li>
               <li><Link to="/service" onClick={handleScrollZero}>Services</Link></li>
               <li><Link to="/contact" onClick={handleScrollZero}>Contact us</Link></li>
-              <li><Link to="/terms" >Terms and-Conditions</Link></li>
+              <li><Link to="/terms" onClick={handleScrollZero}>Terms and-Conditions</Link></li>
             </ul>
             <ul>
-              <li><Link to="/">Portfolio</Link></li>
-              <li><Link to="/">Expert Team</Link></li>
-              <li><Link to="/">Latest News</Link></li>
-              <li><Link to="/">Privacy Policy</Link></li>
-              <li><Link to="/">Privacy Policy</Link></li>
+              <li><Link to="/" onClick={handleScrollZero}>Portfolio</Link></li>
+              <li><Link to="/team" onClick={handleScrollZero}>Expert Team</Link></li>
+              <li><Link to="/latest-news" onClick={handleScrollZero}>Latest News</Link></li>
+              <li><Link to="/privacy-policy" onClick={handleScrollZero}>Privacy Policy</Link></li>
+              {/* <li><Link to="/">Privacy Policy</Link></li> */}
             </ul>
           </div>
           <div className={styles.rightftr}>
@@ -98,15 +99,15 @@ function Footer() {
               {/* <FaMapMarkerAlt /> */}
               <GoogleMap ht="200px" op={0.7} br="3px" />
             </div>
-            <div className={styles.footercontact}>
+            {/* <div className={styles.footercontact}>
               <input type="text" name="footerinput" placeholder="Enter your email add." title="" autoComplete="off" translate="no" maxLength={50} required />
               <button><FaPaperPlane className={styles.footerinpbtn} /></button>
-            </div>
+            </div> */}
           </div>
         </div>
         <hr />
         <p className={styles.copyright_text}>
-          &copy;webfirst 2021 - {new Date().getFullYear()} | All rights reserved
+          &copy;webgeniuscraft 2021 - {new Date().getFullYear()} | All rights reserved
         </p>
       </footer>
     </>

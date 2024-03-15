@@ -141,3 +141,40 @@
 .right_section img {
   max-width: 70%;
 }
+
+
+@media screen and (max-width: 768px) {
+  .homecontainer{
+    flex-direction: column !important;
+  }
+  .videoBackground{
+    position: absolute;
+    opacity: 0.6;
+    right: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-position: center !important;
+  }
+  .left_section,
+  .right_section {
+    margin: auto;
+    width: 100%;
+    height: calc(100vh / 2 - 80px);
+}
+.left_section h1{
+  /* font-size: 1.5rem; */
+  font-size: 6vw;
+}
+.left_section p{
+  font-size: 1.4rem;
+  width: auto;
+  word-spacing: 3px;
+  letter-spacing: 0.2px;
+  backdrop-filter: none;
+  margin: 0;
+}
+
+.contactButton{
+  display: none;
+}
+}

@@ -9,13 +9,11 @@
 @keyframes loadMargin {
   0%{
     margin-top: 150px;
-    opacity: 0;
   }
   100%{
     margin-top: 0px;
-    opacity: 1;
   }
-}
+  }
 .container {
     min-height: 90vh;
     max-width: 80vw;
@@ -54,4 +52,34 @@
     color: var(--secondaryColor);
   }
   
-  
+
+
+
+  @media screen and (max-width: 768px) {
+
+
+  .container {
+    max-width: 95%;
+      min-height: auto;
+      padding-bottom: 20px;
+    }
+    .container h2{
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+    .text_cover{
+      width: 95%;
+      flex-direction: column;
+    }
+    .container ul{
+      width: 100%;
+      padding-left: 20px;
+    }
+    .container ul h3{
+      font-size: 1rem;
+    }
+    .container ul p{
+      color: var(--secondaryColor);
+    }
+      
+  }

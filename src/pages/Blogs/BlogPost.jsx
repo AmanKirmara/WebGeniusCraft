@@ -1,28 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Blogs.module.css";
+import onErrorImage from "../../assets/images/OneErrorImage.png";
 
-function BlogPost({ title, image, content, date }) {
+function BlogPost({ title, image, description, date }) {
+  const handleImageError = (event) => {
+    event.target.src = onErrorImage;
+    event.target.alt = 'Default Poster'}
+
   return (
     <div className={styles.blog}>
       <div className={styles.blog_title}>{title}</div>
-      <img src={image} alt={title} />
-      <div className={styles.blog_content}>
-        {content.map((paragraph, index) => (
-          <p key={index}>
-            {paragraph.split(":").length > 1 ? ( // Check if ":" is present in the paragraph
-              <span>
-                <strong style={{ color: "gold" }}>
-                  {paragraph.split(":")[0]}:{" "}
-                </strong>
-                {paragraph.split(":")[1]}
-              </span>
-            ) : (
-              paragraph
-            )}
-          </p>
-        ))}
-      </div>
+      <img src={image} loading="lazy" alt={title} onError={handleImageError} />
+      <div
+        className={styles.blog_content}
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
       <div className={styles.blog_date}>{date}</div>
     </div>
   );
@@ -31,7 +24,7 @@ function BlogPost({ title, image, content, date }) {
 BlogPost.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  content: PropTypes.arrayOf(PropTypes.string).isRequired,
+  description: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
 };
 

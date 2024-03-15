@@ -1,16 +1,50 @@
-
-.container{
-    min-height: 80vh;
-    animation: loadMargin 0.4s linear 1;
-    transition: margin-top 0.3s ease-in-out;
+.container {
+  min-height: 100%;
+  width: auto;
+  margin: auto;
+  animation: loadMargin 0.4s linear 1;
+  transition: margin-top 0.3s ease-in-out;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap : wrap;
+  padding: 30px;
+  background-image: var(--primaryGradient);
 }
 @keyframes loadMargin {
-  0%{
-    margin-top: 150px;
-    opacity: 0.5;
+  0% {
+      margin-top: 150px;
+      opacity: 0.5;
   }
-  100%{
-    margin-top: 0px;
-    opacity: 1;
+  100% {
+      margin-top: 0px;
+      opacity: 1;
+  }
+}
+
+.container > * {
+  width: calc(25% - 20px); /* 25% for four equal-sized divs, subtracting margin */
+  border: 0.5px solid var(--accentColor);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  background-image: var(--primaryGradient);
+}
+
+/* Adjust width for smaller screens */
+@media screen and (max-width: 768px) {
+  .container > * {
+      width: calc(50% - 20px); /* 33% for three divs in a row on smaller screens */
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container{
+    padding: 5px;
+  }
+  .container > * {
+    width: 95%;
+    margin: 10px auto; 
+    border-radius: 5px;
   }
 }

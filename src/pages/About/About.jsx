@@ -1,7 +1,7 @@
 
 import React from "react";
 import { NavLink } from "react-router-dom";
-import myimg from "../../assets/images/profile.png";
+import myimg from "../../assets/images/myprofile2.png";
 import styles from "./About.module.css";
 
 function About(){
@@ -10,10 +10,13 @@ function About(){
         <div className={styles.container_warp}>
         <div className={styles.container}>
           <h2>About</h2>
+          
           <section className={styles.about}>
+            
             <div className={styles.about_image}>
               <img src={myimg} alt="Profile" />
             </div>
+
             <div className={styles.about_content}>
               <p>
                 I am a passionate and dedicated frontend web developer with a

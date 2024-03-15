@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import Navbar from '../Navbar/Navbar';
-import styles from './Header.module.css';
-import logoImage from '../../assets/images/webgeniuslogo.png';
+import React, { useState, useEffect } from "react";
+import Navbar from "../Navbar/Navbar";
+import styles from "./Header.module.css";
+import logoImage from "../../assets/images/webgeniuslogo.png";
 /* logo created by :: https://express.adobe.com/sp , background-color: transparent */
 // import Notifications from '../Notifications/Notifications';
 
@@ -17,24 +17,25 @@ const Header = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handelLogo = () => {
-    window.location.href = '/';
+    window.location.href = "/";
   };
-  
 
   return (
-    <header className={`${styles.header} ${isHeaderFixed ? styles.fixed : ''}`}>
-     <img
-  className={styles.logo}
-  src={logoImage}
-  onClick={handelLogo}
-  onContextMenu={(e)=>{e.preventDefault()}} 
-  alt="My Logo"
-/>
+    <header className={`${styles.header} ${isHeaderFixed ? styles.fixed : ""}`}>
+      <img
+        className={styles.logo}
+        src={logoImage}
+        onClick={handelLogo}
+        onContextMenu={(e) => {
+          e.preventDefault();
+        }}
+        alt="My Logo"
+      />
 
       <Navbar width="40%" />
       {/* <Notifications /> */}

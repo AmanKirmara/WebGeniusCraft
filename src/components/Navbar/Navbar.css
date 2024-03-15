@@ -1,18 +1,28 @@
-
-
 /* Navbar.module.css */
 @import "../../../src/assets/styles/style.css";
+
+/* General styling */
 .navbar {
-  background-color: transparent;
-  /* width: 80%; */
   color: white;
   font-family: var(--primaryFontFamily);
+  padding: 10px 20px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menubar {
+  font-size: 2rem;
+  transition: transform 0.3s ease-in-out;
 }
 
 .navLinks {
   list-style: none;
   display: flex;
   justify-content: space-around;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .navLinks li {
@@ -20,21 +30,24 @@
   cursor: pointer;
   position: relative;
 }
-.navLinks li a{
+
+.navLinks li a {
   color: white;
   font-size: 0.9rem;
   text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
-.navLinks li a:hover{
-  color: var(--grayColor);
+
+.navLinks li a:hover {
+  color: #888; /* Adjust the color on hover */
 }
-/* Apply styles to the active link */
-li a.active {
-  color: var(--accentColor);
-  border-bottom: 1px solid var(--accentColor);
+
+.navLinks li a.active {
+  color: #4CAF50; /* Adjust the color for the active link */
+  border-bottom: 1px solid #4CAF50;
 }
-.navLinks li::after{
+
+.navLinks li::after {
   content: '';
   display: block;
   left: 0;
@@ -44,4 +57,47 @@ li a.active {
   height: 1.5px;
   border-radius: 4px;
   transition: all 0.4s ease-in-out;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .navbar {
+    background-color: transparent;
+    color: white;
+    font-family: var(--primaryFontFamily);
+    padding: 10px 20px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 200px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-end;
+  }
+  .navLinks {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: var(--primaryColor);
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar.active .navLinks {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .navLinks li {
+    margin: 10px 0;
+  }
+
+  .navLinks li::after {
+    width: 100%;
+  }
 }

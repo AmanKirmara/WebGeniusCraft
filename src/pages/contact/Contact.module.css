@@ -50,10 +50,11 @@ form label{
 }
 .input_wrapper {
     position: relative;
-    margin: 8px auto;
+    margin: auto;
     height: auto;
     padding: 1px;
     display: flex;
+    border-radius: 5px;
     align-items: center;
     justify-content: center;
     overflow: hidden;
@@ -74,7 +75,7 @@ form label{
 .input_wrapper::before{
     left: 50%;
     top: 50%;
-      animation-delay: 2s;
+  animation-delay: 2s;
   }
   
   @keyframes rotateBorder {
@@ -113,5 +114,21 @@ form button{
 }
 form button:hover{
     background-color: black;
+
+}
+
+
+
+
+
+@media screen and ( max-width: 768px ) {
+  .contact_container{
+    width: 100%;
+    
+}
+
+form{
+    width: 95%;
+}
 
 }

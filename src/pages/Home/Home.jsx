@@ -56,7 +56,7 @@ function Home() {
             </span>
           </p>
 
-          <NavLink to="/contact">Contact Us</NavLink>
+          <NavLink to="/contact" className={styles.contactButton}>Contact Us</NavLink>
         </div>
         <div className={styles.right_section}>
           <lottie-player

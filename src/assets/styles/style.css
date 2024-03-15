@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* Global styles */
 
 /* fonts  */
@@ -20,7 +27,8 @@
   /* Root variables */
   :root {
     /* Colors */
-    --primaryColor: #000129;
+    --primaryColor: black;
+    /* --primaryColor: #000129; */
     --secondaryColor: white;
     --accentColor: #00ffff; /* Aqua color used for accents */
     --highlightColor: #ffd700; /* Gold color for highlighting elements */
@@ -80,22 +88,34 @@
   }
   
   .f-r{
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .d-flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .j-c-c{
-    justify-content:center;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
   }
   .j-c-s-a{
-    justify-content:space-around;
+    -ms-flex-pack:distribute;
+        justify-content:space-around;
   }
   .j-c-s-b{
-    justify-content:space-between;
+    -webkit-box-pack:justify;
+        -ms-flex-pack:justify;
+            justify-content:space-between;
   }
   .align-i-e{
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   
   
