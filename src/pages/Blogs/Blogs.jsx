@@ -38,7 +38,7 @@ function Blogs() {
         hasMore={hasMore}
         loader={
         // <h4 className="loading-message">Loading...</h4>
-        <div class={styles.loader}></div>
+        <div className={styles.loader}></div>
       }
         endMessage={
           <p style={{ textAlign: "center", padding: "20px", color: "#555" }}>

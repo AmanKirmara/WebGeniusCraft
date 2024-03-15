@@ -1,9 +1,10 @@
 import axios from "axios";
-const apiUrl = process.env.REACT_APP_API_URL;
+// const apiUrl = process.env.REACT_APP_API_URL;
 
 const fetchPosts = async (page) => {
+    console.log("fetching posts...")
   try {
-    const response = await axios.get(`${apiUrl}/api/v1/blog/?page=${page}`);
+    const response = await axios.get(`/api/v1/blog/?page=${page}`);
     return response.data.posts;
   } catch (error) {
     console.log(error + ": " + error.message);
@@ -15,7 +16,7 @@ const fetchPosts = async (page) => {
 const uploadPost = async (postData) => {
   console.log("uploading post...")
   try {
-    const response = await axios.post(`${apiUrl}/api/v1/blog/`, postData);
+    const response = await axios.post("/api/v1/blog/", postData);
     return response.data;
   } catch (error) {
     console.log(error + ": " + error.message);
