@@ -1,6 +1,5 @@
 import axios from "axios";
 const backendOrigin = process.env.REACT_APP_BACKEND_ORIGIN;
-// const backendOrigin = 'https://webgeniuscraft-backend.onrender.com';
 
 const fetchPosts = async (page) => {
     console.log("fetching posts...")
