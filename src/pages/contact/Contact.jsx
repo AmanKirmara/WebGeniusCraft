@@ -13,7 +13,7 @@ function Contact() {
   const [errorMessage, setErrorMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false); // To track loading state
   const [isButtonDisabled, setIsButtonDisabled] = useState(false); // To disable button
-
+const api = process.env.REACT_APP_BACKEND_ORIGIN;
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData({
@@ -50,7 +50,7 @@ function Contact() {
     setIsButtonDisabled(true); // Disable the submit button
 
     try {
-      const response = await axios.post("/api/v1/users/contact", {
+      const response = await axios.post(`${api}/api/v1/users/contact`, {
         name,
         email,
         message,
