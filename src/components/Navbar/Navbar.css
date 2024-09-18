@@ -12,10 +12,19 @@
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
+.flex{
+  display: flex;
+}
+.w-full{
+  width: 100%;
+}
+.nav{
+  padding-left:  10px;
+}
 .menubar {
   font-size: 2rem;
   transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .navLinks {

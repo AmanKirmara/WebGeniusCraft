@@ -1,7 +1,7 @@
 
 import React from "react";
 import { NavLink } from "react-router-dom";
-import myimg from "../../assets/images/myprofile2.png";
+import myimg from "../../assets/images/resumeimg.png";
 import styles from "./About.module.css";
 
 function About(){

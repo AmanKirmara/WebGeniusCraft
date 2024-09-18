@@ -1,19 +1,26 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Web Genius Craft - Web Development Solutions",
+    "short_name": "WebGenius",
     "icons": [
-        {
-            "src": "/android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/android-chrome-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
+      {
+        "src": "/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
     ],
-    "theme_color": "#ffffff",
+    "theme_color": "#0d0d0d", 
     "background_color": "#ffffff",
-    "display": "standalone"
-}
+    "display": "standalone",
+    "start_url": "/",
+    "description": "Web Genius Craft offers expert web development and design solutions to elevate your business's online presence.",
+    "orientation": "portrait-primary",
+    "lang": "en",
+    "categories": ["technology", "business", "web development"],
+    "scope": "/"
+  }
+  

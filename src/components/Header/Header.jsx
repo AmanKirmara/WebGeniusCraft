@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import styles from "./Header.module.css";
 import logoImage from "../../assets/images/webgeniuslogo.png";
-/* logo created by :: https://express.adobe.com/sp , background-color: transparent */
-// import Notifications from '../Notifications/Notifications';
 
 const Header = () => {
   const [isHeaderFixed, setIsHeaderFixed] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to track menu visibility
+  const location = useLocation(); // Track the current route
+  const navigate = useNavigate();
 
   const handleScroll = () => {
     if (window.scrollY > 80) {
@@ -16,14 +18,18 @@ const Header = () => {
     }
   };
 
+  const handleNavigationClick = () => {
+    setIsMenuOpen(false); // Hide menu when navigation is clicked
+  };
+
+  const handelLogo = () => {
+    navigate("/"); // Use navigate instead of window.location.href
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const handelLogo = () => {
-    window.location.href = "/";
-  };
 
   return (
     <header className={`${styles.header} ${isHeaderFixed ? styles.fixed : ""}`}>
@@ -37,8 +43,13 @@ const Header = () => {
         alt="My Logo"
       />
 
-      <Navbar width="40%" />
-      {/* <Notifications /> */}
+      {/* Pass isMenuOpen and handleNavigationClick to Navbar */}
+      <Navbar
+        width="40%"
+        isMenuOpen={isMenuOpen}
+        onLinkClick={handleNavigationClick}
+        showHomeLink={location.pathname !== "/"} // Show Home if not on the root route
+      />
     </header>
   );
 };
